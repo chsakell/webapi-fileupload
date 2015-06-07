@@ -1,0 +1,27 @@
+﻿<div class="row" ng-controller="fileUploadCtrl">
+    <div class="col-xs-3">
+        <div>
+            <input type="file" ng-file-select="startUploading($files)" multiple>
+        </div>
+    </div>
+    <div class="col-xs-9">
+        <div class="panel panel-default" ng-repeat="uploadedFile in UploadedFiles track by $index">
+            <div class="panel-heading">
+                <strong>{{uploadedFile.FileName}}</strong>
+            </div>
+            <div class="panel-body">
+                <div class=" media">
+                    <a class="pull-left" href="#">
+                        <img class="media-object" width="100" ng-src="../uploads/{{uploadedFile.FileName}}" />
+                    </a>
+                    <div class="media-body">
+                        <div class="lead" style="font-size:14px;color: crimson;width:500px;word-wrap:break-word">{{uploadedFile.FilePath}}</div>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-footer">
+                File total bytes: <span style="color:black">{{uploadedFile.FileLength}}</span>
+            </div>
+        </div>
+    </div>
+</div>

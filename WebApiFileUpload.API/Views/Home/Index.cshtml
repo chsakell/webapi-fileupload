@@ -1,0 +1,29 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Styles/bootstrap.css" rel="stylesheet" />
+</head>
+<body ng-app="angularUploadApp">
+    <div class="container">
+        <div class="jumbotron">
+            <p>Web API File uploading using AngularJS client. Read more at <a href="http://chsakell.com/2015/06/07/web-api-file-uploading-desktop-and-web-client" target="_blank">chsakell.com</a>.</p>
+        </div>
+        <div ng-include="'app/templates/fileUpload.html'"></div>
+
+    </div>
+    <script src="Scripts/jquery-1.8.2.js"></script>
+    <script src="Scripts/angular.js"></script>
+    <script src="Scripts/angular-file-upload.js"></script>
+    <script src="Scripts/angular-route.js"></script>
+    <script src="app/app.js"></script>
+    <script src="app/controllers/fileUploadCtrl.js"></script>
+
+</body>
+</html>
